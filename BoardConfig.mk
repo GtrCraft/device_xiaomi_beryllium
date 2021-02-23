@@ -7,6 +7,9 @@
 # Inherit from sdm845-common
 -include device/xiaomi/sdm845-common/BoardConfigCommon.mk
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 DEVICE_PATH := device/xiaomi/beryllium
 
 # Assert

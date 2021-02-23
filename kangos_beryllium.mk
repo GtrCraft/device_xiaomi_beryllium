@@ -6,11 +6,19 @@
 
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Kang stuff.
+$(call inherit-product, vendor/kangos/config/common.mk)
+
+# Kangos official
+KANGOS_BUILDTYPE := OFFICIAL
+
+# Kangos Maintainer
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=Nick van Bokhorst (GtrCraft) \
+  ro.kangos.cpu=SDM845
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_beryllium
+PRODUCT_NAME := kangos_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
